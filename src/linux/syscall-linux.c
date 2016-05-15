@@ -72,7 +72,6 @@
 #include <sys/uio.h>
 
 #include <linux/serial.h>
-#include <asm/page.h>
 #include <asm/unistd.h>
 
 #include "std.h"
@@ -2252,8 +2251,6 @@ doSyscall (HWORD num, REG arg0, REG arg1, REG arg2, REG arg3, REG arg4,
 	case TIOCSERSETMULTI:	/* Set multiport config */
 	case TIOCMIWAIT:	/* wait for a change on serial input line(s) */
 	case TIOCGICOUNT:	/* read serial port inline interrupt counts */
-	case TIOCGHAYESESP:	/* Get Hayes ESP configuration */
-	case TIOCSHAYESESP:	/* Set Hayes ESP configuration */
 	case SIOCRTMSG:	/* call to routing system	*/
 	case SIOCSIFLINK:	/* set iface channel		*/
 	case SIOCGIFMEM:	/* get memory address (BSD)	*/
